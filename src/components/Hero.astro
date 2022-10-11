@@ -1,0 +1,25 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  isIndex: boolean;
+}
+const { title = "This is the title!", description="This is the description for the page!", isIndex = false } = Astro.props;
+---
+<section>
+  <div>
+    <div>
+      <h1>{title}</h1>
+      <p>{description}</p>
+    <div>
+  {isIndex && <>
+      <div>
+        <p>Place of avatar - img tag</p>
+      </div>
+      <div>
+        <button>Secret link</button>
+        <button>Secret link</button>
+      </div>
+    </>}
+  </div>
+</section>

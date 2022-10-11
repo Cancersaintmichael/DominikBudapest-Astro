@@ -1,0 +1,52 @@
+---
+const links = [
+  {
+    name: 'First item',
+    href: 'link',
+  },
+  {
+    name: 'Second item',
+    href: 'link',
+  },
+  {
+    name: 'Third item',
+    href: 'link',
+  },
+  {
+    name: 'Fourth item',
+    href: 'link',
+  },
+  {
+    name: 'Fifth item',
+    href: 'link',
+  },
+];
+---
+<nav>
+{links.map((link) => (
+  <a href={link.href}>{link.name}</a>
+))}
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    gap: 2rem;
+    height: 4rem;
+    align-items: center;
+    justify-content: center;
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+  }
+  a:hover {
+    background-size: 0 100%;
+      animation: stripes 3s linear 1 forwards;
+      background: linear-gradient(to right, #000000 0%, #FCAF3B 69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

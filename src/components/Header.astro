@@ -1,0 +1,33 @@
+---
+import { Icon } from 'astro-icon';
+import Container from '../components/Container.astro';
+import Nav from '../components/Nav.astro';
+---
+<header>
+<Container>
+  <section>
+  <div><span>Place of logo</span></div>
+    <div>
+    <Icon pack="mdi" name="menu" />
+  </div>
+  </section>
+  <section>
+    <Nav />
+    </section>
+    </Container>
+</header>
+<style lang="css">
+    [astro-icon] {
+        wdith: 24px;
+        height: 24px;
+    }
+    [astro-icon="menu"] {
+        fill: black;
+    }
+    header section:first-child {
+
+    }
+    header section:nth-child(2) {
+      border-bottom: 1px solid #ededed;
+    }
+</style>
